@@ -94,7 +94,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the filebeat.playbook.yml file to etc/ansible
 - Update the hosts file to include [webservers] 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
-- Run the playbook, and navigate to [kibana](http://40.86.91.15:5601/app/kibana) to check that the installation worked as expected.
+- Run the playbook, and navigate to kibana dashboard to check that the installation worked as expected.
 
 ### Running the Playbook
 - From the command line, enter : ansible-playbook filebeat-playbook.yml.  This will download and install filebeat, configure the system module,
