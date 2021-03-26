@@ -2,11 +2,12 @@
 
 The files in this repository were used to configure the network depicted below.
 
-# [NETWORK DIAGRAM]-(https://github.com/coppiper/Azure/blob/cd9482c0907252c97e193dd9da0ed471fb7fde0a/Diagrams/Project%20Cloud%20Diagram.png)]
+[NETWORK DIAGRAM](https://github.com/coppiper/Azure/blob/cd9482c0907252c97e193dd9da0ed471fb7fde0a/Diagrams/Project%20Cloud%20Diagram.png)]
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above.
+Alternatively, select portions of the etc/ansible file may be used to install only certain pieces of it, such as Filebeat.
 
-# [FILEBEAT PLAYBOOK]-(https://github.com/coppiper/Azure/blob/cd9482c0907252c97e193dd9da0ed471fb7fde0a/Ansible/filebeat-playbook.ymlAnsible/filebeat-playbook.yml)
+[FILEBEAT PLAYBOOK](https://github.com/coppiper/Azure/blob/cd9482c0907252c97e193dd9da0ed471fb7fde0a/Ansible/filebeat-playbook.ymlAnsible/filebeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topologu 
@@ -21,12 +22,14 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
 
-- 	Load balancers distribute incoming network traffic between different machines to ensure that no single machine is receiving so much traffic the network fails.  The advantage of using a jump box is so one hardened machine stands between the main network, minimizing the risk to the network.  
+- 	Load balancers distribute incoming network traffic between different machines to ensure that no single machine is receiving so much traffic the network fails.  
+	The advantage of using a jump box is so one hardened machine stands between the main network, minimizing the risk to the network.  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system traffic patterns.
 
 - 	Filebeat monitors the file system of the virtual machines it is installed on and records information such as what and when files have changed.
-- 	Metricbeat records a variety of data such as users from what country visited the site, what time of day they visited, what they did while there (i.e. downloaded a file), and it also records the amount of data a particular visitor used while there.
+- 	Metricbeat records a variety of data such as users from what country visited the site, what time of day they visited, what they did while there
+	(i.e. downloaded a file), and it also records the amount of data a particular visitor used while there.
 
 The configuration details of each machine may be found below.
 
@@ -94,5 +97,5 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to [kibana](http://40.86.91.15:5601/app/kibana) to check that the installation worked as expected.
 
 ### Running the Playbook
-- From the command line, enter: ansible-playbook filebeat-playbook.yml.  This will download and install filebeat, configure the system module,
-  then setup, start and enable upon boot filebeat. 
+- From the command line, enter : ansible-playbook filebeat-playbook.yml.  This will download and install filebeat, configure the system module,
+  then setup, start and enable upon boot filebeat.  
