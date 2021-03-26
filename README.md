@@ -97,5 +97,5 @@ SSH into the control node and follow the steps below:
 - Run the playbook, and navigate to kibana dashboard to check that the installation worked as expected.
 
 ### Running the Playbook
-- From the command line, enter : ansible-playbook filebeat-playbook.yml.  This will download and install filebeat, configure the system module,
+- From the command line, enter: ansible-playbook filebeat-playbook.yml.  This will download and install filebeat, configure the system module,
   then setup, start and enable upon boot filebeat.  
